@@ -24,3 +24,29 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import "theme/variables.scss";
+
+/* ion-header */
+ion-header {
+    &.header-xs,
+    &.header-sm,
+    &.header-md,
+    &.header-lg,
+    &.header-xl {
+        &:after {
+            background-color: var(--ion-color-medium);
+            background-image: none;
+            bottom: -1px;
+            height: 1px;
+            left: 20px;
+            right: 20px;
+            width: auto;
+        }
+    }
+
+    ion-title {
+        font-size: 0.95em;
+        text-transform: uppercase;
+    }
+}
