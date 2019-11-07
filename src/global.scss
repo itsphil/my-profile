@@ -25,7 +25,9 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-@import "theme/variables.scss";
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
 
 /* ion-header */
 ion-header {
@@ -35,18 +37,29 @@ ion-header {
     &.header-lg,
     &.header-xl {
         &:after {
-            background-color: var(--ion-color-medium);
+            background-color: var(--ion-color-light-medium);
             background-image: none;
             bottom: -1px;
             height: 1px;
-            left: 20px;
-            right: 20px;
+            left: 40px;
+            right: 40px;
             width: auto;
         }
     }
 
     ion-title {
         font-size: 0.95em;
+        padding-left: 40px;
         text-transform: uppercase;
+    }
+}
+
+/* ion-content */
+ion-content {
+    .page {
+        display: flex;
+	    flex-direction: column;
+        height: 100%;
+        padding: 60px var(--ion-page-padding) 0 !important;
     }
 }

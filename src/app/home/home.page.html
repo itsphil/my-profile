@@ -5,26 +5,49 @@
     </ion-buttons>
     <ion-title>
       My profile
+      <ion-icon name="build" color="light"></ion-icon>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="page">
-  <div class="profile-header">
-    <img src="https://picsum.photos/id/473/300/300" />
-
-    <div class="profile-header-actions">
-      <div class="follow">
-        <ion-icon name="add"></ion-icon>
+<ion-content>
+  <div class="page">
+    <div class="profile-header">
+      <div class="profile-header-top">
+        <img class="profile-header-image" src="https://picsum.photos/id/473/300/300" />
       </div>
-      <div class="notifications">
-        <ion-icon name="alarm"></ion-icon>
+
+      <div class="profile-header-intro">
+        <h1 class="profile-header-title">John Smith, 39</h1>
+        <h3 class="profile-header-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
       </div>
     </div>
 
-    <div class="profile-header-intro">
-      <h1>John Smith</h1>
-      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+    <div class="profile-socials">
+        <div class="profile-socials-item">
+          <ion-icon name="logo-github" color="secondary"></ion-icon>
+        </div>
+        <div class="profile-socials-item">
+          <ion-icon name="logo-codepen" color="secondary"></ion-icon>
+        </div>
+        <div class="profile-socials-item">
+          <ion-icon name="logo-twitter" color="secondary"></ion-icon>
+        </div>
+    </div>
+
+    <div class="profile-content">
+      <ion-row>
+        <ion-col size-sm>
+          <div class="profile-content-item">
+            <span class="item-label">Location:</span>
+            <span class="item-value">United Kingdom</span>
+          </div>
+        </ion-col>
+
+        <ion-col size-sm>
+          
+        </ion-col>
+      </ion-row>
     </div>
   </div>
 </ion-content>
