@@ -49,7 +49,6 @@ ion-header {
 
     ion-title {
         font-size: 0.95em;
-        padding-left: 40px;
         text-transform: uppercase;
     }
 }
@@ -61,5 +60,20 @@ ion-content {
 	    flex-direction: column;
         height: 100%;
         padding: 60px var(--ion-page-padding) 0 !important;
+    }
+}
+
+/* breakpoints */
+@media (min-width: 540px) {
+    ion-header {
+        &.header-xs,
+        &.header-sm,
+        &.header-md,
+        &.header-lg,
+        &.header-xl {
+            ion-title {
+                padding-left: 40px;
+            }
+        }
     }
 }

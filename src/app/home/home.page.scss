@@ -48,8 +48,8 @@ $actions-spacing: 10px;
         border-right: 1px solid var(--ion-color-light);
         border-top: 1px solid var(--ion-color-light);
         cursor: pointer;
-        flex: 0 44px;
-        height: 44px;
+        flex: 0 48px;
+        height: 48px;
         padding: 8px;
         transition: padding 0.2s ease-in-out;
 
@@ -62,8 +62,8 @@ $actions-spacing: 10px;
         }
 
         ion-icon {
-            height: 28px;
-            width: 28px;
+            height: 32px;
+            width: 32px;
         }
     }
 }
@@ -76,11 +76,28 @@ $actions-spacing: 10px;
     margin: 0 -40px;
     padding: 60px 40px;
     width: calc(100% + 80px);
+
+    .profile-content-item { margin-bottom: 20px; }
+
+    .item-value {
+        display: block;
+        font-weight: 300;
+        padding: 6px 0 0;
+        width: 100%;
+    }
 }
 
 /* breakpoints */
 @media (min-width: 540px) {
     .profile-header {    
         .profile-header-image { width: 200px; }
+    }
+
+    .profile-content {
+        .item-value {
+            display: inline-block;
+            padding: 0 0 0 4px;
+            width: auto;
+        }
     }
 }
