@@ -8,49 +8,48 @@
       </div>
 
       <div class="profile-header-intro">
-        <h1 class="profile-header-title">John Smith, 39</h1>
-        <h3 class="profile-header-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+        <h1 class="profile-header-title" *ngIf="profile.name">{{ profile.name }} <span *ngIf="profile.age">, {{ profile.age }}</span></h1>
+        <h3 class="profile-header-subtitle" *ngIf="profile.description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
       </div>
     </div>
 
     <div class="profile-socials">
-        <div class="profile-socials-item">
-          <a href="http://github.com/johnsmith"><ion-icon name="logo-github" color="secondary"></ion-icon></a>
+        <div class="profile-socials-item" *ngIf="profile.linkGithub">
+          <a href="{{ profile.linkGithub }}"><ion-icon name="logo-github" color="secondary"></ion-icon></a>
         </div>
-        <div class="profile-socials-item">
-          <a href="http://codepen.io/johnsmith"><ion-icon name="logo-codepen" color="secondary"></ion-icon></a>
+        <div class="profile-socials-item" *ngIf="profile.linkCodepen">
+          <a href="{{ profile.linkCodepen }}"><ion-icon name="logo-codepen" color="secondary"></ion-icon></a>
         </div>
-        <div class="profile-socials-item">
-          <a href="http://twitter.com/johnsmith"><ion-icon name="logo-twitter" color="secondary"></ion-icon></a>
+        <div class="profile-socials-item" *ngIf="profile.linkTwitter">
+          <a href="{{ profile.linkTwitter }}"><ion-icon name="logo-twitter" color="secondary"></ion-icon></a>
         </div>
     </div>
 
     <div class="profile-content">
       <ion-row>
-        <ion-col size-xs="12" size-md="6">
-          <div class="profile-content-item">
+        <ion-col>
+          <div class="profile-content-item" *ngIf="profile.location">
             <span class="item-label">Location:</span>
-            <span class="item-value">Ipswich, United Kingdom</span>
+            <span class="item-value">{{ profile.location }}</span>
           </div>
 
-          <div class="profile-content-item">
+          <div class="profile-content-item" *ngIf="profile.currentEmployment">
             <span class="item-label">Current Employment:</span>
-            <span class="item-value">John Smith Limited <small>(since 2008)</small></span>
+            <span class="item-value">
+              {{ profile.currentEmployment }}
+              <small *ngIf="profile.currentEmploymentSince">(since {{ profile.currentEmploymentSince }})</small>
+            </span>
           </div>
 
-          <div class="profile-content-item">
+          <div class="profile-content-item" *ngIf="profile.commercialExperience">
             <span class="item-label">Commercial Experience (years):</span>
-            <span class="item-value">10</span>
+            <span class="item-value">{{ profile.commercialExperience }}</span>
           </div>
 
-          <div class="profile-content-item">
+          <div class="profile-content-item" *ngIf="profile.noticePeriod">
             <span class="item-label">Notice Period:</span>
-            <span class="item-value">1 month</span>
+            <span class="item-value">{{ profile.noticePeriod }}</span>
           </div>
-        </ion-col>
-
-        <ion-col size-xs="12" size-md="6">
-            
         </ion-col>
       </ion-row>
     </div>

@@ -8,8 +8,9 @@ export interface ProfileState {
 export const initialState: ProfileState = {
   data: {
     age: 39,
-    commercialExperience: '10',
+    commercialExperience: 10,
     currentEmployment: 'John Smith Industries',
+    currentEmploymentSince: 2008,
     description: 'Lorem ipsum dolor',
     linkCodepen: 'http://codepen.io/johnsmith',
     linkGithub: 'http://github.com/johnsmith',

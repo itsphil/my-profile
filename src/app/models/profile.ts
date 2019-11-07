@@ -1,7 +1,8 @@
 export class Profile {
     age: number;
-    commercialExperience: string;
+    commercialExperience: number;
     currentEmployment: string;
+    currentEmploymentSince: number;
     description: string;
     linkCodepen: string;
     linkGithub: string;

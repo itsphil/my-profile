@@ -17,7 +17,7 @@ export class ProfileService {
     this.profile = this.store.select(getProfile);
   }
 
-  getNote(): Observable<Profile> {
+  getProfile(): Observable<Profile> {
     return this.store.select(getProfile);
   }
 
