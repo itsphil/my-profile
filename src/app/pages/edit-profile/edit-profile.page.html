@@ -60,13 +60,15 @@
             <ion-input type="text" formControlName="linkTwitter"></ion-input>
           </ion-item>
 
-          <ion-button type="button" color="light" [disabled]="!profileForm.valid" (click)="goToProfile()">
-            Return to Profile
-          </ion-button>
+          <div class="form-actions">
+            <ion-button class="btn-return" type="button" color="light" [disabled]="!profileForm.valid" (click)="goToProfile()">
+              Return to Profile
+            </ion-button>
 
-          <ion-button type="submit" color="secondary" [disabled]="!profileForm.valid">
-            Save Profile
-          </ion-button>
+            <ion-button class="btn-save" type="submit" color="secondary" [disabled]="!profileForm.valid">
+              Save Profile
+            </ion-button>
+          </div>
         </form>
       </ion-col>
     </ion-row>

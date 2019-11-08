@@ -1,1 +1,15 @@
 ion-row { padding-bottom: 60px; }
+ion-col { padding: 0; }
+
+/* breakpoints */
+@media (max-width: 540px) {
+    .form-actions {
+        display: flex;
+        flex-direction: column-reverse;
+
+        ion-button {
+            flex: 1 100%;
+            width: 100%;
+        }
+    }
+}
