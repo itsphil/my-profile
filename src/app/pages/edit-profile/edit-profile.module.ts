@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { ComponentsModule } from '../../components/components.module';
 import { ProfileService } from '../../services/profile.service';
 
-import { ProfilePage } from './profile.page';
+import { EditProfilePage } from './edit-profile.page';
 
 @NgModule({
   imports: [
@@ -17,12 +17,12 @@ import { ProfilePage } from './profile.page';
     RouterModule.forChild([
       {
         path: '',
-        component: ProfilePage
+        component: EditProfilePage
       }
     ]),
     ComponentsModule
   ],
-  declarations: [ProfilePage],
+  declarations: [EditProfilePage],
   providers: [ProfileService]
 })
-export class ProfilePageModule {}
+export class EditProfilePageModule {}

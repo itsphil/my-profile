@@ -15,6 +15,11 @@ export class AppComponent {
       title: 'My Profile',
       url: '/profile',
       icon: 'person'
+    },
+    {
+      title: 'Edit Profile',
+      url: '/profile/edit',
+      icon: 'build'
     }
   ];
 
