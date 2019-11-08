@@ -63,6 +63,13 @@ ion-content {
     }
 }
 
+/* ionic forms */
+form ion-item {
+    margin-bottom: 20px;
+
+    ion-input { color: var(--ion-color-dark) !important; }
+}
+
 /* breakpoints */
 @media (min-width: 540px) {
     ion-header {

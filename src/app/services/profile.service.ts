@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Store } from '@ngrx/store';
 
 import { Observable } from 'rxjs';
@@ -11,7 +12,7 @@ import { AppState, getProfile } from '../reducers';
   providedIn: 'root'
 })
 export class ProfileService {
-  public profile: Observable<Profile>;
+  profile: Observable<Profile>;
 
   constructor(private store: Store<AppState>) {
     this.profile = this.store.select(getProfile);
@@ -23,5 +24,21 @@ export class ProfileService {
 
   editProfile(profile: Profile): void {
     this.store.dispatch(new ProfileActions.EditProfile({ profile }));
+  }
+
+  getProfileForm(profile: Profile): FormGroup {
+    return new FormGroup({
+        age: new FormControl(profile.age, Validators.required),
+        commercialExperience: new FormControl(profile.commercialExperience, Validators.required),
+        currentEmployment: new FormControl(profile.currentEmployment, Validators.required),
+        currentEmploymentSince: new FormControl(profile.currentEmploymentSince, Validators.required),
+        description: new FormControl(profile.description, Validators.required),
+        linkCodepen: new FormControl(profile.linkCodepen, Validators.required),
+        linkGithub: new FormControl(profile.linkGithub, Validators.required),
+        linkTwitter: new FormControl(profile.linkTwitter, Validators.required),
+        location: new FormControl(profile.location, Validators.required),
+        name: new FormControl(profile.name, Validators.required),
+        noticePeriod: new FormControl(profile.noticePeriod, Validators.required)
+    });
   }
 }

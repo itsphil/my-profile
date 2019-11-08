@@ -2,6 +2,67 @@
 
 <ion-content>
   <div class="page">
-    edit profile page
+    <ion-row>
+      <ion-col size-xs="12" size-lg="8">
+        <form [formGroup]="profileForm" (ngSubmit)="update()">
+          <ion-item>
+            <ion-label position="floating">Name</ion-label>
+            <ion-input type="text" formControlName="name"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Age</ion-label>
+            <ion-input type="number" formControlName="age"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">About me</ion-label>
+            <ion-input type="textarea" formControlName="description"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Location</ion-label>
+            <ion-input type="text" formControlName="location"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Current Employment</ion-label>
+            <ion-input type="text" formControlName="currentEmployment"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Year started at Current Employment</ion-label>
+            <ion-input type="number" formControlName="currentEmploymentSince"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Commercial Experience</ion-label>
+            <ion-input type="number" formControlName="commercialExperience"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Notice Period</ion-label>
+            <ion-input type="text" formControlName="noticePeriod"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Github</ion-label>
+            <ion-input type="text" formControlName="linkGithub"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Codepen</ion-label>
+            <ion-input type="text" formControlName="linkCodepen"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Twitter</ion-label>
+            <ion-input type="text" formControlName="linkTwitter"></ion-input>
+          </ion-item>
+
+          <button type="submit">Save Profile</button>
+        </form>
+      </ion-col>
+    </ion-row>
   </div>
 </ion-content>
