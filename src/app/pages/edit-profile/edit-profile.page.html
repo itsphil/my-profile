@@ -16,8 +16,8 @@
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">About me</ion-label>
-            <ion-input type="textarea" formControlName="description"></ion-input>
+            <ion-label position="floating">About me (max 200 characters)</ion-label>
+            <ion-textarea rows="4" maxlength="200" formControlName="description"></ion-textarea>
           </ion-item>
 
           <ion-item>
@@ -60,7 +60,13 @@
             <ion-input type="text" formControlName="linkTwitter"></ion-input>
           </ion-item>
 
-          <button type="submit" [disabled]="!profileForm.valid">Save Profile</button>
+          <ion-button type="button" color="light" [disabled]="!profileForm.valid" (click)="goToProfile()">
+            Return to Profile
+          </ion-button>
+
+          <ion-button type="submit" color="secondary" [disabled]="!profileForm.valid">
+            Save Profile
+          </ion-button>
         </form>
       </ion-col>
     </ion-row>

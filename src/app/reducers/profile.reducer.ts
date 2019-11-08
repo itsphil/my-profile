@@ -11,7 +11,7 @@ let initialStateObj =  {
     commercialExperience: 10,
     currentEmployment: 'John Smith Industries',
     currentEmploymentSince: 2008,
-    description: 'Lorem ipsum dolor',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada auctor mauris. Mauris non tempor lectus. Curabitur dolor quam, auctor ac massa nec, pretium interdum lacus.',
     linkCodepen: 'http://codepen.io/johnsmith',
     linkGithub: 'http://github.com/johnsmith',
     linkTwitter: 'http://twitter.com/johnsmith',

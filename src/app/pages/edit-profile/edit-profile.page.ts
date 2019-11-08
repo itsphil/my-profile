@@ -30,6 +30,10 @@ export class EditProfilePage {
   update(): void {
     this.profileService.editProfile(this.profileForm.value);
 
+    this.goToProfile();
+  }
+
+  goToProfile(): void {
     this.router.navigate(['profile']);
   }
 }
