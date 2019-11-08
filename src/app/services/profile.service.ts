@@ -15,6 +15,10 @@ export class ProfileService {
   profile: Observable<Profile>;
 
   constructor(private store: Store<AppState>) {
+    this.init();
+  }
+
+  private init(): void {
     this.profile = this.store.select(getProfile);
   }
 

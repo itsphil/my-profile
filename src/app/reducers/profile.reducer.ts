@@ -5,7 +5,7 @@ export interface ProfileState {
   data: Profile;
 }
 
-export const initialState: ProfileState = {
+let initialStateObj =  {
   data: {
     age: 39,
     commercialExperience: 10,
@@ -20,6 +20,15 @@ export const initialState: ProfileState = {
     noticePeriod: '1 Month'
   }
 };
+const storedProfile = window.localStorage.getItem('myProfileData');
+
+if (storedProfile) {
+  initialStateObj = {
+    data: JSON.parse(storedProfile)
+  };
+}
+
+export const initialState: ProfileState = initialStateObj;
 
 export function reducer(
   state = initialState,
@@ -27,6 +36,8 @@ export function reducer(
 ): ProfileState {
   switch (action.type) {
     case fromProfile.ActionTypes.EditProfile: {
+      storeProfileData(action);
+
       return {
         ...state,
         data: action.payload.profile
@@ -40,3 +51,7 @@ export function reducer(
 }
 
 export const getProfile = (state: ProfileState) => state.data;
+
+function storeProfileData(action) {
+  window.localStorage.setItem('myProfileData', JSON.stringify(action.payload.profile));
+}

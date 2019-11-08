@@ -60,7 +60,7 @@
             <ion-input type="text" formControlName="linkTwitter"></ion-input>
           </ion-item>
 
-          <button type="submit">Save Profile</button>
+          <button type="submit" [disabled]="!profileForm.valid">Save Profile</button>
         </form>
       </ion-col>
     </ion-row>
