@@ -6,42 +6,42 @@
       <ion-col size-xs="12" size-lg="8">
         <form [formGroup]="profileForm" (ngSubmit)="update()">
           <ion-item>
-            <ion-label position="floating">Name</ion-label>
+            <ion-label class="required" position="floating">Name</ion-label>
             <ion-input type="text" formControlName="name"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">Age</ion-label>
+            <ion-label class="required" position="floating">Age</ion-label>
             <ion-input type="number" formControlName="age"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">About me (max 200 characters)</ion-label>
+            <ion-label class="required" position="floating">About me (max 200 characters)</ion-label>
             <ion-textarea rows="4" maxlength="200" formControlName="description"></ion-textarea>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">Location</ion-label>
+            <ion-label class="required" position="floating">Location</ion-label>
             <ion-input type="text" formControlName="location"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">Current Employment</ion-label>
+            <ion-label class="required" position="floating">Current Employment</ion-label>
             <ion-input type="text" formControlName="currentEmployment"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">Year started at Current Employment</ion-label>
+            <ion-label class="required" position="floating">Year started at Current Employment</ion-label>
             <ion-input type="number" formControlName="currentEmploymentSince"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">Commercial Experience</ion-label>
+            <ion-label class="required" position="floating">Commercial Experience</ion-label>
             <ion-input type="number" formControlName="commercialExperience"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">Notice Period</ion-label>
+            <ion-label class="required" position="floating">Notice Period</ion-label>
             <ion-input type="text" formControlName="noticePeriod"></ion-input>
           </ion-item>
 

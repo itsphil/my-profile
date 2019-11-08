@@ -68,6 +68,12 @@ form {
     ion-item {
         margin-bottom: 20px;
 
+        ion-label.required:after {
+            color: var(--ion-color-tertiary);
+            content: "*";
+            display: inline-block;
+            padding-left: 3px;
+        }
         ion-input { color: var(--ion-color-dark) !important; }
     }
     
@@ -86,6 +92,16 @@ form {
             ion-title {
                 padding-left: 40px;
             }
+        }
+    }
+
+    .form-actions {
+        display: flex;
+        flex-direction: column-reverse;
+
+        ion-button {
+            flex: 1 100%;
+            width: 100%;
         }
     }
 }

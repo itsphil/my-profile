@@ -37,9 +37,9 @@ export class ProfileService {
         currentEmployment: new FormControl(profile.currentEmployment, Validators.required),
         currentEmploymentSince: new FormControl(profile.currentEmploymentSince, Validators.required),
         description: new FormControl(profile.description, Validators.required),
-        linkCodepen: new FormControl(profile.linkCodepen, Validators.required),
-        linkGithub: new FormControl(profile.linkGithub, Validators.required),
-        linkTwitter: new FormControl(profile.linkTwitter, Validators.required),
+        linkCodepen: new FormControl(profile.linkCodepen),
+        linkGithub: new FormControl(profile.linkGithub),
+        linkTwitter: new FormControl(profile.linkTwitter),
         location: new FormControl(profile.location, Validators.required),
         name: new FormControl(profile.name, Validators.required),
         noticePeriod: new FormControl(profile.noticePeriod, Validators.required)
